@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-quickstart'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-quickstart');
+    expect(app.title).toEqual('twosh');
   });
 
   it('should render title', () => {

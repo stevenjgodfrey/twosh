@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'twosh',
+  templateUrl: './twosh.component.html',
   styleUrls: ['../demo-styling.css']
 })
-export class AppComponent {
+export class TwoshComponent {
   title = 'twosh';
 }
