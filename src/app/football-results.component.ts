@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FootballAPIService } from './football_api.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'football-results',
@@ -7,13 +8,13 @@ import { FootballAPIService } from './football_api.service';
   styleUrls: ['../demo-styling.css']
 })
 export class FootballResultsComponent implements OnInit{
-
-  constructor(private footballAPIService: FootballAPIService) { }
+  constructor(private footballAPIService: FootballAPIService,
+    private location: Location) { }
   title = 'football-results';
   fixtures: any[] = [];
 
   ngOnInit(): void {
-    console.log('before')  
+
 
     this.footballAPIService.getLocalFixtures(63)
     .subscribe((data: any) => {
@@ -29,8 +30,8 @@ export class FootballResultsComponent implements OnInit{
       });
       }
     });
-    
-      
+
+
   }
 
 }

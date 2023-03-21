@@ -6,15 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FootballResultsComponent } from './football-results.component';
 import { FootballAPIService } from './football_api.service';
-import { MatchesComponent } from './matches.component';
 import { TwoshComponent } from './twosh.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TwoshComponent,
-    FootballResultsComponent,
-    MatchesComponent
+    FootballResultsComponent
   ],
   imports: [
     BrowserModule,
