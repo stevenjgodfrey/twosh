@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "twosh",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -28,6 +28,7 @@
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^16.0.0",
+    "football-api-client": "^1.0.8",
     "cypress": "^12.7.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",

@@ -1,0 +1,221 @@
+{
+  "get": "fixtures",
+  "parameters": {
+    "from": "2023-03-01",
+    "season": "2022",
+    "to": "2023-03-20",
+    "team": "63"
+  },
+  "errors": [],
+  "results": 3,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "fixture": {
+        "id": 868200,
+        "referee": "Michael Oliver, England",
+        "timezone": "UTC",
+        "date": "2023-03-04T15:00:00+00:00",
+        "timestamp": 1677942000,
+        "periods": {
+          "first": 1677942000,
+          "second": 1677945600
+        },
+        "venue": {
+          "id": 519,
+          "name": "Stamford Bridge",
+          "city": "London"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-3.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-1.api-sports.io/flags/gb.svg",
+        "season": 2022,
+        "round": "Regular Season - 26"
+      },
+      "teams": {
+        "home": {
+          "id": 49,
+          "name": "Chelsea",
+          "logo": "https://media-2.api-sports.io/football/teams/49.png",
+          "winner": true
+        },
+        "away": {
+          "id": 63,
+          "name": "Leeds",
+          "logo": "https://media-3.api-sports.io/football/teams/63.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 868210,
+        "referee": "Paul Tierney, England",
+        "timezone": "UTC",
+        "date": "2023-03-11T15:00:00+00:00",
+        "timestamp": 1678546800,
+        "periods": {
+          "first": 1678546800,
+          "second": 1678550400
+        },
+        "venue": {
+          "id": 546,
+          "name": "Elland Road",
+          "city": "Leeds, West Yorkshire"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-3.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-1.api-sports.io/flags/gb.svg",
+        "season": 2022,
+        "round": "Regular Season - 27"
+      },
+      "teams": {
+        "home": {
+          "id": 63,
+          "name": "Leeds",
+          "logo": "https://media-2.api-sports.io/football/teams/63.png",
+          "winner": null
+        },
+        "away": {
+          "id": 51,
+          "name": "Brighton",
+          "logo": "https://media-1.api-sports.io/football/teams/51.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 868225,
+        "referee": "Salisbury Michael, England",
+        "timezone": "UTC",
+        "date": "2023-03-18T15:00:00+00:00",
+        "timestamp": 1679151600,
+        "periods": {
+          "first": 1679151600,
+          "second": 1679155200
+        },
+        "venue": {
+          "id": 600,
+          "name": "Molineux Stadium",
+          "city": "Wolverhampton, West Midlands"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-3.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-1.api-sports.io/flags/gb.svg",
+        "season": 2022,
+        "round": "Regular Season - 28"
+      },
+      "teams": {
+        "home": {
+          "id": 39,
+          "name": "Wolves",
+          "logo": "https://media-3.api-sports.io/football/teams/39.png",
+          "winner": false
+        },
+        "away": {
+          "id": 63,
+          "name": "Leeds",
+          "logo": "https://media-1.api-sports.io/football/teams/63.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
+}

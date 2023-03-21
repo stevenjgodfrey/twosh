@@ -1,0 +1,54 @@
+{
+  "get": "teams",
+  "parameters": {
+    "code": "LEE"
+  },
+  "errors": [],
+  "results": 2,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 63,
+        "name": "Leeds",
+        "code": "LEE",
+        "country": "England",
+        "founded": 1919,
+        "national": false,
+        "logo": "https://media-2.api-sports.io/football/teams/63.png"
+      },
+      "venue": {
+        "id": 546,
+        "name": "Elland Road",
+        "address": "Elland Road",
+        "city": "Leeds, West Yorkshire",
+        "capacity": 40204,
+        "surface": "grass",
+        "image": "https://media-2.api-sports.io/football/venues/546.png"
+      }
+    },
+    {
+      "team": {
+        "id": 7239,
+        "name": "Leek Town",
+        "code": "LEE",
+        "country": "England",
+        "founded": null,
+        "national": false,
+        "logo": "https://media-1.api-sports.io/football/teams/7239.png"
+      },
+      "venue": {
+        "id": 5240,
+        "name": "Harrison Park",
+        "address": "Macclesfield Road",
+        "city": "Leek, Staffordshire",
+        "capacity": 3600,
+        "surface": "grass",
+        "image": "https://media-3.api-sports.io/football/venues/5240.png"
+      }
+    }
+  ]
+}

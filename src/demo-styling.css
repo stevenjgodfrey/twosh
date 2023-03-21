@@ -129,6 +129,12 @@ body{
   line-height: 30px;
 }
 
+table {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
 footer {
   margin: 0 auto;
   width: 100%;

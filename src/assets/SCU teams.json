@@ -1,0 +1,34 @@
+{
+  "get": "teams",
+  "parameters": {
+    "code": "SCU"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 1340,
+        "name": "Scunthorpe",
+        "code": "SCU",
+        "country": "England",
+        "founded": 1899,
+        "national": false,
+        "logo": "https://media-2.api-sports.io/football/teams/1340.png"
+      },
+      "venue": {
+        "id": 18857,
+        "name": "Glanford Park",
+        "address": "Doncaster Road",
+        "city": "Scunthorpe",
+        "capacity": 9088,
+        "surface": "grass",
+        "image": "https://media-3.api-sports.io/football/venues/18857.png"
+      }
+    }
+  ]
+}

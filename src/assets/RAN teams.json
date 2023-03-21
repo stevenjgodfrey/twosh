@@ -1,0 +1,94 @@
+{
+  "get": "teams",
+  "parameters": {
+    "code": "RAN"
+  },
+  "errors": [],
+  "results": 4,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 257,
+        "name": "Rangers",
+        "code": "RAN",
+        "country": "Scotland",
+        "founded": 1873,
+        "national": false,
+        "logo": "https://media-1.api-sports.io/football/teams/257.png"
+      },
+      "venue": {
+        "id": 1401,
+        "name": "Ibrox Stadium",
+        "address": "150 Edmiston Drive",
+        "city": "Glasgow",
+        "capacity": 51082,
+        "surface": "grass",
+        "image": "https://media-2.api-sports.io/football/venues/1401.png"
+      }
+    },
+    {
+      "team": {
+        "id": 322,
+        "name": "Ranheim",
+        "code": "RAN",
+        "country": "Norway",
+        "founded": 1901,
+        "national": false,
+        "logo": "https://media-3.api-sports.io/football/teams/322.png"
+      },
+      "venue": {
+        "id": 1188,
+        "name": "EXTRA Arena",
+        "address": "Ranheimsveien 166",
+        "city": "Ranheim",
+        "capacity": 3000,
+        "surface": "artificial turf",
+        "image": "https://media-3.api-sports.io/football/venues/1188.png"
+      }
+    },
+    {
+      "team": {
+        "id": 401,
+        "name": "Randers FC",
+        "code": "RAN",
+        "country": "Denmark",
+        "founded": 2003,
+        "national": false,
+        "logo": "https://media-2.api-sports.io/football/teams/401.png"
+      },
+      "venue": {
+        "id": 457,
+        "name": "Cepheus Park Randers",
+        "address": "Viborgvej 92a",
+        "city": "Randers",
+        "capacity": 12000,
+        "surface": "grass",
+        "image": "https://media-2.api-sports.io/football/venues/457.png"
+      }
+    },
+    {
+      "team": {
+        "id": 2344,
+        "name": "Rangers de Talca",
+        "code": "RAN",
+        "country": "Chile",
+        "founded": 1902,
+        "national": false,
+        "logo": "https://media-1.api-sports.io/football/teams/2344.png"
+      },
+      "venue": {
+        "id": 339,
+        "name": "Estadio Fiscal de Talca",
+        "address": "Avenida Libertador Bernardo O´Higgins 251",
+        "city": "Talca",
+        "capacity": 17020,
+        "surface": "grass",
+        "image": "https://media-2.api-sports.io/football/venues/339.png"
+      }
+    }
+  ]
+}
