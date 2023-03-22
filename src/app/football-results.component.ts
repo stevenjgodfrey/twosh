@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FootballAPIService } from './football_api.service';
 import { Location } from '@angular/common';
+import { JsonFileService } from './jsonFile.service';
 
 @Component({
   selector: 'football-results',
@@ -9,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class FootballResultsComponent implements OnInit{
   constructor(private footballAPIService: FootballAPIService,
-    private location: Location) { }
+              private jsonFileService: JsonFileService) { }
   title = 'football-results';
   fixtures: any[] = [];
 
