@@ -23,12 +23,8 @@ export class FootballResultsComponent implements OnInit{
 
       if (this.fixtures.length === 0) {
 
-        this.footballAPIService.getFixtures(63)
-      .subscribe((data: any) => {
-        this.fixtures = data.response;
-        console.log('fixtures '||this.fixtures)
-        console.log('data '||data.response)
-      });
+        this.fixtures = this.footballAPIService.getFixtures(63);
+
       }
     });
 

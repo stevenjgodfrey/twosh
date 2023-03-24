@@ -1,16 +1,5 @@
 {
-  "get": "fixtures",
-  "parameters": {
-    "from": "2023-03-01",
-    "season": "2022",
-    "to": "2023-03-20",
-    "team": "63"
-  },
-  "errors": [],
-  "results": 3,
-  "paging": {
-    "current": 1,
-    "total": 1
-  },
-  "response": []
+	"response": [
+
+	]
 }

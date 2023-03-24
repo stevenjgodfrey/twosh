@@ -36,6 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+assets/api_key.json
 
 # System files
 .DS_Store
@@ -43,3 +44,5 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
+
+
