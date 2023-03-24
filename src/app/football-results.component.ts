@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FootballAPIService } from './football_api.service';
-import { Location } from '@angular/common';
 import { JsonFileService } from './jsonFile.service';
 
 @Component({
@@ -23,7 +22,12 @@ export class FootballResultsComponent implements OnInit{
 
       if (this.fixtures.length === 0) {
 
-        this.fixtures = this.footballAPIService.getFixtures(63);
+        this.footballAPIService.getFixtures(63).subscribe((data: any) => {
+          this.fixtures = data.response;
+          console.log('fixtures '||this.fixtures)
+          return this.fixtures;
+
+        });;
 
       }
     });

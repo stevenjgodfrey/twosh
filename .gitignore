@@ -36,7 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-assets/api_key.json
+.env
 
 # System files
 .DS_Store
