@@ -1,6 +1,9 @@
 [build]
   command="ng build"
+  functions = "./functions"
   publish="dist/twosh"
+[dev]
+  functions = "./functions"
 
 [[redirects]]
   from = "/*"

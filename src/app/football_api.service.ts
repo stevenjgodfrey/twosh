@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFileService } from './jsonFile.service';
-import { environment } from '../environments/environment';
-
+import {map, switchMap} from 'rxjs/operators';
+import { ApiKeyService } from './apiKey.service';
 @Injectable({
     providedIn: 'root'
   })
 export class FootballAPIService {
 
   constructor(private            http: HttpClient,
-              private jsonFileService: JsonFileService) {
+              private jsonFileService: JsonFileService,
+              private apiKeyService: ApiKeyService) {
   }
 
   fixtures : any[]=[];
-
-  getApiKey() {
-
-    return environment.apiKey;
-//    return this.jsonFileService.readJsonFile('../../../../api_key/api_key.json');
-  }
+  apiKey: string = '';
   /**
    * Get a list of fixtures for a team.
    * @param teamId The ID of the team.
@@ -27,14 +23,19 @@ export class FootballAPIService {
   getFixtures(teamId: number) {
 
     const url = 'https://api-football-v1.p.rapidapi.com/v3/fixtures';
-    const params = {season: '2022', team: teamId, last:3 };
-    const api_key = this.getApiKey();
-    console.log('api_key '||api_key);
-    const headers = {'X-RapidAPI-Key': api_key,
-                       'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-                    };
-    return   this.http.get(url, {params, headers})
+    const params = {season: '2023', team: teamId, last:4 };
 
+     return this.apiKeyService.getApiKey().pipe(
+                      switchMap((data: any) => {
+                      this.apiKey = data.response;
+                      console.log(this.apiKey + " subscribe");
+                      const headers = {'X-RapidAPI-Key': this.apiKey,
+                      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+                   };
+
+                    return   this.http.get(url, {params, headers});
+                })
+                );
   }
 
     getLocalFixtures(teamId: number) {
