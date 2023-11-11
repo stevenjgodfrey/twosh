@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FootballAPIService } from './football_api.service';
-import { JsonFileService } from './jsonFile.service';
 import { switchMap } from 'rxjs/operators';
 import { ApiKeyService } from './apiKey.service';
 import { HttpClient } from '@angular/common/http';
@@ -12,9 +10,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['../demo-styling.css']
 })
 export class FootballResultsComponent implements OnInit{
-  constructor(private footballAPIService: FootballAPIService,
-              private jsonFileService: JsonFileService,
-              private apiKeyService: ApiKeyService,
+  constructor(private apiKeyService: ApiKeyService,
               private            http: HttpClient
               ) { }
   title = 'football-results';
@@ -37,7 +33,6 @@ export class FootballResultsComponent implements OnInit{
          const op = this.apiKeyService.getApiKey().pipe(
                           switchMap((data: any) => {
                           this.apiKey = data.message;
-                          console.log(this.apiKey + " subscribe");
                           const headers = {'X-RapidAPI-Key': this.apiKey,
                           'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
                        };
@@ -47,16 +42,7 @@ export class FootballResultsComponent implements OnInit{
 
                     op.subscribe((data: any) => {
                       this.fixtures = data.response;
-                      console.log('fixtures '||this.fixtures)
                     });
-
-         /* this.footballAPIService.getFixtures(63).subscribe((data: any) => {
-            this.fixtures = data.response;
-            console.log('fixtures '||this.fixtures)
-            return this.fixtures;
-
-          });;*/
-
         };
 
       }

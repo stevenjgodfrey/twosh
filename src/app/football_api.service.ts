@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFileService } from './jsonFile.service';
-import {map, switchMap} from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { ApiKeyService } from './apiKey.service';
 @Injectable({
     providedIn: 'root'
   })
 export class FootballAPIService {
 
-  constructor(private            http: HttpClient,
+  constructor(private http: HttpClient,
               private jsonFileService: JsonFileService,
               private apiKeyService: ApiKeyService) {
   }
@@ -39,7 +39,6 @@ export class FootballAPIService {
   }
 
     getLocalFixtures(teamId: number) {
-      //const fileName = teamId.toString() + '_fixtures.json';
       const fileName ='LEE_fixtures.json';
       console.log(fileName|| ' fileName');
         return this.jsonFileService.readJsonFile(fileName);
