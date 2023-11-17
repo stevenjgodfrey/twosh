@@ -1,0 +1,15 @@
+<section id="experience">
+  <div class="box">
+    <div class="container">
+      <ul>
+        <li (click)="onEntryClicked('ava')">Avaloq - Software Engineer, June 2021 - July 2022</li>
+        <li (click)="onEntryClicked('rol')">Royal London - Senior Software Developer, May 2006 - May 2021</li>
+        <li (click)="onEntryClicked('csg')">Costcutter Supermarket Group - Oracle Developer, February 2001 - May 2006</li>
+        <li (click)="onEntryClicked('acc')">ACCA - Oracle Developer, September 1998 - September 2000</li>
+        <li (click)="onEntryClicked('fwp')">Fraser Williams Property Management - Oracle Developer, March 1997 - August 1999</li>
+      </ul>
+    </div>
+
+    <app-subcomponent class="container" *ngIf="entryClicked !== ''"></app-subcomponent>
+  </div>
+</section>
