@@ -4,8 +4,8 @@ describe('empty spec', () => {
   })
 
   it('displays the resources text', () => {
-    cy.get('h2')
-    .contains('Twosh');
+    cy.get('h1')
+    .contains('Be Curious');
   })
   it('renders the image', () => {
     cy.get('img')
