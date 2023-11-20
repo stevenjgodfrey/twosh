@@ -45,3 +45,6 @@ Thumbs.db
 .netlify
 
 
+cypress/screenshots/basic.cy.ts/empty spec -- displays the resources text (failed).png
+cypress/screenshots/basic.cy.ts/empty spec -- renders the image (failed).png
+cypress/videos/basic.cy.ts.mp4
