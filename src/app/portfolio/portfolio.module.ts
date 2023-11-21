@@ -2,20 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PortfolioComponent } from './portfolio.component';
 import { IntroductionComponent } from './introduction/introduction.component';
-import { EducationComponent } from './education/education.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
 import { SubcomponentComponent } from './subcomponent/subcomponent.component';
 import { EntryService } from './services/entry.service';
+import { AchievementComponent } from './achievement/achievement.component';
 
 @NgModule({
   declarations: [
     PortfolioComponent,
     IntroductionComponent,
-    EducationComponent,
-    ExperienceComponent,
-    SkillsComponent,
-    SubcomponentComponent
+    SubcomponentComponent,
+    AchievementComponent
   ],
   imports: [
     BrowserModule

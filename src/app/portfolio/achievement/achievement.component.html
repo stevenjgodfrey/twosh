@@ -1,0 +1,11 @@
+<section id="achievement">
+  <div class="container">
+    <ul>
+      <li *ngFor="let item of items" (click)="onEntryClicked(item.onClick)">
+        {{ item.field1 }} - {{ item.field2 }} - {{ item.field3 }}
+      </li>
+    </ul>
+  </div>
+  <app-subcomponent class="container" *ngIf="entryClicked !== '' && entryClicked !== undefined"></app-subcomponent>
+
+</section>

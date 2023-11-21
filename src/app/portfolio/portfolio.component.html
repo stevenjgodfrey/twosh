@@ -1,7 +1,9 @@
 <div>
   <div class="header">
     <div class="left-cell">
-      <img src="../../assets/linkedin.png" class="responsive-image"/>
+      <a href="https://www.linkedin.com/in/steven-godfrey-025b8324">
+        <img src="../../assets/linkedin.png" class="responsive-image"/>
+      </a>
     </div>
     <div class="center-cell">
       <nav>
@@ -19,13 +21,12 @@
   </div>
   <div class="main-content">
     <div class ="box">
-      <div class="description">
+      <div *ngIf="items!==undefined" class="description">
         <div [ngSwitch]="module">
-          <div *ngSwitchCase="'introduction'"><app-introduction></app-introduction></div>
-          <div *ngSwitchCase="'experience'"><app-experience></app-experience></div>
-          <div *ngSwitchCase="'education'"><app-education></app-education></div>
-          <div *ngSwitchCase="'skills'"><app-skills></app-skills></div>
-          <div *ngSwitchDefault><app-introduction></app-introduction></div>
+          <div *ngSwitchCase="'introduction'"><app-introduction [items]='items'></app-introduction></div>
+          <div *ngSwitchDefault>
+            <app-achievement  [items]='items'></app-achievement>
+          </div>
         </div>
       </div>
     </div>

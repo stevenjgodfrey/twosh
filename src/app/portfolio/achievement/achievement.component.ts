@@ -1,13 +1,15 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EntryService } from '../services/entry.service';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+  selector: 'app-achievement',
+  templateUrl: './achievement.component.html'
 })
-export class ExperienceComponent {
+export class AchievementComponent {
+
   entryClicked : string = '';
+  @Input() items: any[] = [];
+  @Input() fieldType:string = '';
 
   constructor(private entryService: EntryService) {}
 
@@ -15,4 +17,5 @@ export class ExperienceComponent {
     this.entryClicked = entry;
     this.entryService.setSelectedEntry(entry);
   }
+
 }

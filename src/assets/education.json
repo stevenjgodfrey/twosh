@@ -1,0 +1,20 @@
+[
+  { "id": 1,
+    "fieldType": "education",
+    "field1": "Napier University - Post Graduate Diploma",
+    "field2": "Software Technology",
+    "field3": "October 1995 - June 1996"},
+  { "id": 2,
+    "fieldType": "education",
+    "field1": "Heriot Watt University - BA Honours",
+    "field2": "Economics",
+    "field3": "October 1989 - June 1993"},
+  { "id": 3,
+    "fieldType": "education",
+    "field1": "John Leggott College - A level",
+    "field2": "Physics, Maths, Economics",
+    "field3": "September 1987 - June 1989"}
+]
+
+
+

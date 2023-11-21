@@ -1,32 +1,4 @@
 <div class="subcomponent">
-  <p *ngIf="selectedEntry === 'ava'">I worked as a software engineer alongside testers, a scrum master and a
-    product owner in the European tax team.
-    I analysed, developed, tested and delivered updates to Avaloq software,
-    which is used by banks across Europe as their core banking system. The
-    system is written using plsql and proprietary software against an oracle
-    11g database.</p>
-  <p *ngIf="selectedEntry === 'rol'">For the first 11 years of my time at Royal London, I worked in a number of
-    different teams to develop major upgrades to the Royal London pension
-    system, which is written in .net and plsql against an oracle 11g database. I was responsible for analysis, estimation, development and
-    delivery of the plsql element of these upgrades. In addition I maintained
-    the pl/sql coding standards, did code reviews and provided mentoring for junior developers.</p>
-
-    <p *ngIf="selectedEntry === 'csg'">for the last 4 years at Royal London I worked on a new system that uses
-    an angular front end to connect to apis and subsequent backend
-    systems.
-    I analysed, developed and delivered angular software to provide the front
-    end. I also analysed and designed the APIs required to call the back end
-    systems.</p>
-  <p *ngIf="selectedEntry === 'acc'">I developed upgrades to an in house invoicing system and added a data
-    warehousing system using pl/sql, java, oracle forms and cognos against Oracle 9i
-    on solaris and windows.</p>
-  <p *ngIf="selectedEntry === 'entry4'">I worked as an Oracle developer, analysing, developing and testing
-    upgrades to the Association of Chartered Certified Accountants system.
-    The system is written in Oracle forms and reports against an Oracle 9i
-    database.</p>
-  <p *ngIf="selectedEntry === 'fwp'">I worked as an Oracle developer, analysing, developing and testing
-    upgrades to the Fraser Williams Property Management system. The
-    system was written in Oracle forms and reports against an Oracle 7
-    database.</p>
+  <p>{{selectedEntryDescription}}</p>
 </div>
 

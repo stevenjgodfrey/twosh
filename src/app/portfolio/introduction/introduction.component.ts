@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-introduction',
-  templateUrl: './introduction.component.html',
-  styleUrls: ['./introduction.component.css']
+  templateUrl: './introduction.component.html'
 })
 export class IntroductionComponent {
+  @Input() items: any[] = [];
 
 }
