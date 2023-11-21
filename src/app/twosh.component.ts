@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'twosh',
   templateUrl: './twosh.component.html',
-  styleUrls: ['../demo-styling.css']
+  styleUrls: ['../styles.css']
 })
 export class TwoshComponent {
   title = 'twosh';

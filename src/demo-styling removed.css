@@ -58,13 +58,6 @@ body{
   font-weight: 500;
 }
 
-@media only screen and (max-width: 450px) {
-  .header h2 {
-    width: 90%;
-    padding: 5%;
-  }
-}
-
 .bttns{
   margin-bottom: 5%;
 }
@@ -142,5 +135,5 @@ footer {
 }
 
 footer img {
-  width: 20px;
+  width: 100px;
 }

@@ -1,10 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['../demo-styling.css']
+  styleUrls: ['../styles.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'twosh';
+  isVisible = "true";
+  href: string = '';
+
+  constructor( private router: Router) { }
+
+  setVisible(visible: string): void {
+    this.isVisible = visible;
+  }
+
+  ngOnInit() {
+
+    if (this.router ) {
+      this.router.events.subscribe(() => {
+        if (this.router && this.router.url) {
+          this.href = this.router.url;
+            if (this.href == "/portfolio") {
+              this.setVisible("false");
+          }
+        }
+      });
+    }
+  }
 }

@@ -1,19 +1,13 @@
-<svg id="background" width='1728' height='1235' viewBox="0 0 1728 1235" fill='none' xmlns='http://www.w3.org/2000/svg'>
-</svg>
-
-<div id="content">
+<div id="content" >
   <table>
     <tr>
       <td>
-      <ul>
+      <ul *ngIf="isVisible=='true'">
         <li>
           <a routerLink="/twosh-component" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
         </li>
         <li>
-          <a routerLink="/football-results-component" routerLinkActive="active" ariaCurrentWhenActive="page">Football results</a>
-        </li>
-        <li>
-          <a routerLink="/portfolio" routerLinkActive="active" ariaCurrentWhenActive="page">Portfolio</a>
+          <a routerLink="/portfolio" routerLinkActive="active" (click)="setVisible('false')" ariaCurrentWhenActive="page">Portfolio</a>
         </li>
       </ul>
     </td>
@@ -24,6 +18,6 @@
     </tr>
   </table>
   <footer class="footer">
-    footer
+    <img src="../../assets/linkedin.png" />
   </footer>
 </div>

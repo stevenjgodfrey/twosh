@@ -1,44 +1,40 @@
 <header class="header-content">
   <div>
-    <div class="header-content">
-      <div class="profile-picture" >
-        <img src="../../assets/me.jpg"  alt="Profile Picture" width="100" height="100" viewBox="0 0 100 100" />
+    <div>
+      <div class="description">
+        <nav>
+          <ul>
+            <li><a (click)="setModule('experience')">Experience</a></li>
+            <li><a (click)="setModule('education')">Education</a></li>
+            <li><a (click)="setModule('skills')">Skills</a></li>
+            <li></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <div class="header-content">
+    <div>
       <div class="description">
         <h1>Steven Godfrey</h1>
         <p>Developer</p>
       </div>
     </div>
   </div>
+  <div class="profile-picture" >
+    <img (click)="setModule('introduction')" src="../../assets/me.jpg"  alt="Profile Picture" width="100" height="100" viewBox="0 0 100 100" />
+  </div>
 </header>
 
-  <div class="main-content">
-    <div class ="box">
-      <div class="description">
-        <nav>
-          <ul>
-            <li><a  (click)="setModule('introduction')">Introduction</a></li>
-            <li><a (click)="setModule('education')">Education</a></li>
-            <li><a (click)="setModule('experience')">Experience</a></li>
-            <li><a (click)="setModule('skills')">Skills</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="description">
-        <div [ngSwitch]="module">
-          <div *ngSwitchCase="'introduction'"><app-introduction></app-introduction></div>
-          <div *ngSwitchCase="'experience'"><app-experience></app-experience></div>
-          <div *ngSwitchCase="'education'"><app-education></app-education></div>
-          <div *ngSwitchCase="'skills'"><app-skills></app-skills></div>
-          <div *ngSwitchDefault><app-introduction></app-introduction></div>
-        </div>
+<div class="main-content">
+  <div class ="box">
+
+    <div class="description">
+      <div [ngSwitch]="module">
+        <div *ngSwitchCase="'introduction'"><app-introduction></app-introduction></div>
+        <div *ngSwitchCase="'experience'"><app-experience></app-experience></div>
+        <div *ngSwitchCase="'education'"><app-education></app-education></div>
+        <div *ngSwitchCase="'skills'"><app-skills></app-skills></div>
+        <div *ngSwitchDefault><app-introduction></app-introduction></div>
       </div>
     </div>
   </div>
-
-
-<footer>
-  <!-- Add your footer content here -->
-</footer>
+</div>

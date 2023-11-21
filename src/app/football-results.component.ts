@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'football-results',
   templateUrl: './football-results.component.html',
-  styleUrls: ['../demo-styling.css']
+  styleUrls: ['../styles.css']
 })
 export class FootballResultsComponent implements OnInit{
   constructor(private apiKeyService: ApiKeyService,
