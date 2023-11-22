@@ -18,7 +18,6 @@ export class SubcomponentComponent {
       this.selectedEntry = entry;
       this.achievementsService.getData("achievement-description").subscribe((data) => {
         for (const item of data) {
-          // You can perform additional logic or modifications here if needed
           if (item.field1 == entry) {
             this.selectedEntryDescription = item.field2;
           }

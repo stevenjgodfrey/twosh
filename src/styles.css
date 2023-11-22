@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif; /* Adjust the font family as needed */
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content horizontally */
@@ -21,6 +22,7 @@ body {
 
 .header {
   width: 100%;
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   padding: 10px; /* Add padding as needed */
@@ -39,11 +41,11 @@ body {
 
 .big-left-cell {
   flex-grow: 1;
-  text-align: center;
+
 }
 
 .big-right-cell {
-  width: 70%; /* Adjust the width as needed */
+  width: 50%; /* Adjust the width as needed */
 }
 .responsive-image {
   width: 100%; /* Make the image take up 100% of its container width */
@@ -87,19 +89,20 @@ body {
   display:flex;
   font-size: 16px;
   margin: 0;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .p {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 a {
   color: #333;
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -119,11 +122,6 @@ nav ul li {
   margin-right: 10px;
 }
 
-nav ul li a.active {
-  /* Add your active menu item styles here */
-  font-weight: bold;
-  color: hsl(0, 100%, 50%);
-}
 
 /* Main Content */
 .main-content {
@@ -188,7 +186,7 @@ tr:nth-child(even) {
 tr.active {
   background-color: #d3cccc; /* Set the background color you want for the active state */
   /* color: #333;  Set the text color for the active state */
-  /* Add any other styles for the active state */
+  font-weight: bold;
 }
 
 tr:hover {
@@ -206,10 +204,8 @@ li {
 cursor: pointer;
 }
 
-li a.active {
-  /* Add your active menu item styles here */
+li.active {
   font-weight: bold;
-  color: hsl(0, 100%, 50%);
 }
 
 

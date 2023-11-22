@@ -14,7 +14,7 @@ export class PortfolioComponent implements OnInit {
 
   module: string = 'introduction';
   items: any[] = [];
-  menu: any[] = ['experience','education','skills'];
+  menu: any[] = [];
 
   setActive(selectedMenuItem: any): void {
     this.menu.forEach(menuItem => menuItem.isActive = false);
@@ -23,20 +23,32 @@ export class PortfolioComponent implements OnInit {
   onEntryClicked(entry: string, selectedItem: any) {
     this.entryClicked = entry;
     this.entryService.setSelectedEntry(entry);
+    if (entry != 'introduction') {
     this.setActive(selectedItem);
+    }
   }
 
-  setModule(mod: string): void {
+  setModule(mod: string, menuItem: any): void {
 
     this.items = [];
     this.module = mod;
     this.achievementsService.getData(this.module).subscribe((data) => {
     this.items = data;
+    this.onEntryClicked(mod, menuItem );
     });
+
   }
 
   ngOnInit() {
-    this.setModule(this.module);
+
+    this.achievementsService.getData('menu').subscribe((data) => {
+      this.menu = data;
+      this.setModule(this.module, null);
+      });
+
     };
+
+
+
   }
 

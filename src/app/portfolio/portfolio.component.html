@@ -8,14 +8,16 @@
     <div class="center-cell">
       <nav>
         <ul>
-          <li *ngFor="let menuItem of menu" (click)="setModule(menuItem)" [class.active]="menuItem.isActive">
-            <a>{{menuItem}}</a>
+          <li *ngFor="let menuItem of menu" (click)="setModule(menuItem.menuName, menuItem)" [class.active]="menuItem.isActive">
+            <a>{{menuItem.menuName}}</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="right-cell">
-        <img (click)="setModule('introduction')" src="../../assets/me.png"  alt="Profile Picture" class="responsive-image" />
+      <a>
+        <img (click)="setModule('introduction',null)" src="../../assets/me.png"  alt="Profile Picture" class="responsive-image" />
+      </a>
     </div>
   </div>
   <div class="main-content">

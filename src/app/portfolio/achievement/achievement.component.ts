@@ -16,13 +16,14 @@ export class AchievementComponent implements OnInit{
 
   ngOnInit(): void {
     this.dataItems = this.items.filter(item => item.fieldType !== "header");
-    this.onEntryClicked(this.items[1].onClick, this.items[1]);
-
+    this.onEntryClicked(this.dataItems[0].onClick, this.dataItems[0]);
   }
+
   setActive(selectedItem: any): void {
-    this.items.forEach(item => item.isActive = false);
+    this.dataItems.forEach(item => item.isActive = false);
     selectedItem.isActive = true;
   }
+
   onEntryClicked(entry: string, selectedItem: any) {
     this.entryClicked = entry;
     this.entryService.setSelectedEntry(entry);

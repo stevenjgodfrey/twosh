@@ -9,7 +9,7 @@
       <th>
         {{items[0].field2}}
       </th>
-      <th>
+      <th *ngIf="items[0].field3!==''">
         {{items[0].field3}}
       </th>
     </tr>
@@ -20,7 +20,7 @@
         <td>
           {{item.field2}}
         </td>
-        <td>
+        <td *ngIf="item.field3!==''">
           {{item.field3}}
         </td>
 
