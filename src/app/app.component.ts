@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'twosh';
-  isVisible = "true";
+  isVisible = "false";
   href: string = '';
 
   constructor( private router: Router) { }
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
       this.router.events.subscribe(() => {
         if (this.router && this.router.url) {
           this.href = this.router.url;
-            if (this.href == "/portfolio") {
+            if (this.href == "/portfolio" || this.href == "/") {
               this.setVisible("false");
           }
         }

@@ -1,4 +1,9 @@
-[
+[{  "id": 0,
+    "fieldType": "header",
+    "field1": "Institution",
+    "field2": "Qualification",
+    "field3": "Time Period",
+    "onClick": ""},
   { "id": 1,
     "fieldType": "education",
     "field1": "Napier University - Post Graduate Diploma",

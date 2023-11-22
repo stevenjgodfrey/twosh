@@ -5,7 +5,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TwoshComponent } from './twosh.component';
 
 const routes: Routes = [
-  { path: '', component: TwoshComponent }
+  { path: '', component: PortfolioComponent }
  ,{ path: 'twosh-component', component: TwoshComponent }
  ,{ path: 'football-results-component', component: FootballResultsComponent }
  ,{ path: 'portfolio', component: PortfolioComponent }

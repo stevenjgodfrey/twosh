@@ -1,11 +1,35 @@
 <section id="achievement">
-  <div class="container">
-    <ul>
-      <li *ngFor="let item of items" (click)="onEntryClicked(item.onClick)">
-        {{ item.field1 }} - {{ item.field2 }} - {{ item.field3 }}
-      </li>
-    </ul>
-  </div>
-  <app-subcomponent class="container" *ngIf="entryClicked !== '' && entryClicked !== undefined"></app-subcomponent>
+  <div class="header">
+  <div class="big-left-cell">
+    <table>
+      <tr>
+      <th>
+        {{items[0].field1}}
+      </th>
+      <th>
+        {{items[0].field2}}
+      </th>
+      <th>
+        {{items[0].field3}}
+      </th>
+    </tr>
+      <tr *ngFor="let item of dataItems" (click)="onEntryClicked(item.onClick,item)" [class.active]="item.isActive">
+        <td>
+          {{item.field1}}
+        </td>
+        <td>
+          {{item.field2}}
+        </td>
+        <td>
+          {{item.field3}}
+        </td>
 
+      </tr>
+    </table>
+
+</div>
+  <div class="big-right-cell">
+  <app-subcomponent class="container" *ngIf="entryClicked !== '' && entryClicked !== undefined" ></app-subcomponent>
+</div>
+</div>
 </section>

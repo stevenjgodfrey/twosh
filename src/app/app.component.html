@@ -1,15 +1,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website Title</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="../styles.css"> <!-- Link to your CSS file -->
 </head>
 
 <body>
   <div id="content" >
-    <table>
-      <tr>
-        <td>
+
         <ul *ngIf="isVisible=='true'">
           <li>
             <a routerLink="/twosh-component" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
@@ -18,15 +16,8 @@
             <a routerLink="/portfolio" routerLinkActive="active"  (click)="setVisible('false')" ariaCurrentWhenActive="page">Portfolio</a>
           </li>
         </ul>
-      </td>
-        <td>
+
           <!-- The routed views render in the <router-outlet>-->
           <router-outlet></router-outlet>
-        </td>
-      </tr>
-    </table>
-    <footer class="footer">
-
-    </footer>
   </div>
 </body>

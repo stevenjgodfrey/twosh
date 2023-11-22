@@ -1,4 +1,9 @@
-[
+[{ "id": 0,
+   "fieldType": "header",
+   "field1": "Company",
+   "field2": "Position",
+   "field3": "Time Period",
+   "onClick": ""},
   { "id": 1,
     "fieldType": "experience",
     "field1": "Avaloq",

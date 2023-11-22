@@ -3,5 +3,12 @@
     "fieldType": "introduction",
     "field1": "Welcome to my Portfolio!",
     "field2": "I have over 20 years experience using pl/sql in complex back end environments, with asp, forms and angular as the front end.",
-    "field3": "I have worked in the financial, insurance, retail and government sectors."}
+    "field3": "I have worked in the financial, retail and government sectors.",
+    "onClick": ""},
+    { "id": 1,
+    "fieldType": "introduction",
+    "field1": "Welcome to my Portfolio!",
+    "field2": "I have over 20 years experience using pl/sql in complex back end environments, with asp, forms and angular as the front end.",
+    "field3": "I have worked in the financial, retail and government sectors.",
+    "onClick": ""}
 ]

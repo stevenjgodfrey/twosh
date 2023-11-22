@@ -8,22 +8,23 @@
     <div class="center-cell">
       <nav>
         <ul>
-          <li><a (click)="setModule('experience')">Experience</a></li>
-          <li><a (click)="setModule('education')">Education</a></li>
-          <li><a (click)="setModule('skills')">Skills</a></li>
-          <li></li>
+          <li *ngFor="let menuItem of menu" (click)="setModule(menuItem)" [class.active]="menuItem.isActive">
+            <a>{{menuItem}}</a>
+          </li>
         </ul>
       </nav>
     </div>
     <div class="right-cell">
-        <img (click)="setModule('introduction')" src="../../assets/me.jpg"  alt="Profile Picture" class="responsive-image" />
+        <img (click)="setModule('introduction')" src="../../assets/me.png"  alt="Profile Picture" class="responsive-image" />
     </div>
   </div>
   <div class="main-content">
     <div class ="box">
-      <div *ngIf="items!==undefined" class="description">
+      <div *ngIf="items!==undefined && items[1]!==undefined" class="description">
         <div [ngSwitch]="module">
-          <div *ngSwitchCase="'introduction'"><app-introduction [items]='items'></app-introduction></div>
+          <div *ngSwitchCase="'introduction'">
+            <app-introduction [items]='items'></app-introduction>
+          </div>
           <div *ngSwitchDefault>
             <app-achievement  [items]='items'></app-achievement>
           </div>
