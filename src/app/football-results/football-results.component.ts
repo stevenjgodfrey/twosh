@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
-import { ApiKeyService } from './apiKey.service';
+import { ApiKeyService } from '../apiKey.service';
 import { HttpClient } from '@angular/common/http';
 
 
 @Component({
   selector: 'football-results',
   templateUrl: './football-results.component.html',
-  styleUrls: ['../styles.css']
+  styleUrls: ['../../styles.css']
 })
 export class FootballResultsComponent implements OnInit{
   constructor(private apiKeyService: ApiKeyService,

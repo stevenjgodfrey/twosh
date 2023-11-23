@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFileService } from './jsonFile.service';
 import { switchMap } from 'rxjs/operators';
-import { ApiKeyService } from './apiKey.service';
+import { ApiKeyService } from '../apiKey.service';
 @Injectable({
     providedIn: 'root'
   })
