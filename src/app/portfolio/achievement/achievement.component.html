@@ -1,5 +1,5 @@
 <section id="achievement">
-<div class="header">
+<div>
   <table>
     <tr>
       <th>
@@ -11,7 +11,7 @@
       <th *ngIf="items[0].field3!==''">
         {{items[0].field3}}
       </th>
-      <th>
+      <th *ngIf="items[0].descriptionExists==='Y'">
       </th>
     </tr>
     <tr *ngFor="let item of dataItems" (click)="onEntryClicked(item.onClick,item)" [class.active]="item.isActive">
@@ -24,7 +24,7 @@
       <td *ngIf="item.field3!==''">
         {{item.field3}}
       </td>
-      <td>
+      <td *ngIf="item.descriptionExists==='Y'">
         <button (click)="openModal(item)">Show Details</button>
       </td>
     </tr>
