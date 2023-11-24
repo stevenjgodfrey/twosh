@@ -29,9 +29,20 @@ body {
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* Add padding as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 .left-cell,
 .right-cell {
   width: 10%; /* Adjust the width as needed */
+}
+
+.small-cell {
+  width: 5%; /* Adjust the width as needed */
 }
 
 .center-cell {
@@ -39,14 +50,28 @@ body {
   text-align: center;
 }
 
-.big-left-cell {
-  flex-grow: 1;
-
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.big-right-cell {
-  width: 50%; /* Adjust the width as needed */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 40%;
+  max-height: 40%;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .responsive-image {
   width: 100%; /* Make the image take up 100% of its container width */
   height: auto; /* Maintain the image's aspect ratio */

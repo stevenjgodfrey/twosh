@@ -16,4 +16,6 @@ export class AchievementsService {
     this.dataUrl = 'assets/' + fieldType + '.json';
     return this.http.get<any[]>(this.dataUrl);
   }
+
+
 }

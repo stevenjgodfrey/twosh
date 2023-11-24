@@ -1,0 +1,24 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="small-cell">
+        <a>
+        </a>
+      </div>
+      <div class="center-cell">
+        <a>
+
+        </a>
+      </div>
+      <div class="small-cell">
+        <a>
+          <img src="../../assets/cross.jpg" class="responsive-image"/>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="selectedRow">
+      <!-- Display the large field for the selected row -->
+      {{ selectedRow }}
+    </div>
+  </div>
+</div>

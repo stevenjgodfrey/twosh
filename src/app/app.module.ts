@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { HomeComponent } from './home.component';
 import { FootballResultsModule } from './football-results/football-results.module';
+import { ModalComponent } from './modal/modal.component';
+import { DataService } from './data.service';
+import { ModalModule } from './modal/modal.module';
 
 
 @NgModule({
@@ -18,8 +21,10 @@ import { FootballResultsModule } from './football-results/football-results.modul
     AppRoutingModule,
     HttpClientModule,
     PortfolioModule,
-    FootballResultsModule
+    FootballResultsModule,
+    ModalModule
   ],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

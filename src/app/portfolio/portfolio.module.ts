@@ -5,6 +5,7 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { SubcomponentComponent } from './subcomponent/subcomponent.component';
 import { EntryService } from './services/entry.service';
 import { AchievementComponent } from './achievement/achievement.component';
+import { ModalModule } from '../modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AchievementComponent } from './achievement/achievement.component';
     AchievementComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ModalModule
   ],
   exports: [
     PortfolioComponent

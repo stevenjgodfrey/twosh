@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,15 @@ export class AppComponent implements OnInit {
   isVisible = "false";
   href: string = '';
 
-  constructor( private router: Router) { }
+  showModal = false;
+  selectedRow: any;
+
+  constructor( private router: Router
+              ,private dataService: DataService
+               ) {
+                this.dataService.showModal$.subscribe((show) => (this.showModal = show));
+                this.dataService.selectedRow$.subscribe((row) => (this.selectedRow = row));
+                }
 
   setVisible(visible: string): void {
     this.isVisible = visible;
