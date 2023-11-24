@@ -6,13 +6,16 @@ import { SubcomponentComponent } from './subcomponent/subcomponent.component';
 import { EntryService } from './services/entry.service';
 import { AchievementComponent } from './achievement/achievement.component';
 import { ModalModule } from '../modal/modal.module';
+import { DynamicImageComponent } from 'src/app/dynamic-image/dynamic-image.component';
+
 
 @NgModule({
   declarations: [
     PortfolioComponent,
     IntroductionComponent,
     SubcomponentComponent,
-    AchievementComponent
+    AchievementComponent,
+    DynamicImageComponent
   ],
   imports: [
     BrowserModule,

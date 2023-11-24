@@ -22,7 +22,12 @@
         {{item.field2}}
       </td>
       <td *ngIf="item.field3!==''">
-        {{item.field3}}
+        <span *ngIf="items[0].field3!=='Proficiency'">
+          {{item.field3}}
+        </span>
+        <a *ngIf="items[0].field3==='Proficiency'">
+          <app-dynamic-image [squareCount]=item.field3></app-dynamic-image>
+        </a>
       </td>
       <td *ngIf="item.descriptionExists==='Y'">
         <button (click)="openModal(item)">Show Details</button>
