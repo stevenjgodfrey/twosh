@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalComponent } from './modal.component';
-import { ModalService } from '../portfolio/services/modal.service';
+import { ModalService } from '../services/modal.service';
 
 @NgModule({
   declarations: [

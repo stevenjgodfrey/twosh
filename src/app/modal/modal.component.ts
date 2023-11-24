@@ -1,7 +1,7 @@
 // modal.component.ts
 
 import { Component, Input } from '@angular/core';
-import { ModalService } from '../portfolio/services/modal.service';
+import { ModalService } from '../services/modal.service';
 import { Subscription } from 'rxjs';
 
 @Component({

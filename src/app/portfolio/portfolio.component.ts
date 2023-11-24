@@ -11,8 +11,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private achievementsService: AchievementsService,
               private entryService: EntryService) {}
   entryClicked : string = '';
-
-  module: string = 'introduction';
+  public introComponent: string = 'introduction';
   items: any[] = [];
   menu: any[] = [];
 
@@ -20,32 +19,32 @@ export class PortfolioComponent implements OnInit {
     this.menu.forEach(menuItem => menuItem.isActive = false);
     selectedMenuItem.isActive = true;
   }
-  onEntryClicked(entry: string, selectedItem: any) {
-    this.entryClicked = entry;
-    this.entryService.setSelectedEntry(entry);
-    if (entry != 'introduction') {
-    this.setActive(selectedItem);
-    }
-  }
 
   setModule(mod: string, menuItem: any): void {
-
     this.items = [];
-    this.module = mod;
-    this.achievementsService.getData(this.module).subscribe((data) => {
-    this.items = data;
-    this.onEntryClicked(mod, menuItem );
+    this.entryClicked = mod;
+    this.achievementsService.getData(mod).subscribe((data) => {
+      this.items = data;
+      this.entryService.setSelectedEntry(mod);
+      this.setActive(menuItem);
     });
+  }
 
+  setIntroModule(mod: string): void {
+    this.items = [];
+    this.entryClicked = mod;
+    this.menu.forEach(menuItem => menuItem.isActive = false);
+    this.achievementsService.getData(mod).subscribe((data) => {
+      this.items = data;
+      this.entryService.setSelectedEntry(mod);
+    });
   }
 
   ngOnInit() {
-
     this.achievementsService.getData('menu').subscribe((data) => {
       this.menu = data;
-      this.setModule(this.module, null);
+      this.setIntroModule(this.introComponent);
       });
-
     };
 
 
