@@ -1,7 +1,7 @@
 // modal.component.ts
 
 import { Component, Input } from '@angular/core';
-import { DataService } from '../data.service';
+import { ModalService } from '../portfolio/services/modal.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,7 +12,7 @@ export class ModalComponent {
   @Input() selectedRow: any;
   private subscription: Subscription;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: ModalService) {
     this.subscription = this.dataService.selectedRow$.subscribe(
       (row) => (this.selectedRow = row)
     );

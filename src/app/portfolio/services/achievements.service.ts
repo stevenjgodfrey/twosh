@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AchievementsService {
-  private dataUrl = 'assets/achievements.json'; // Adjust the path accordingly
+  private dataUrl = 'assets/achievements.json';
 
   constructor(private http: HttpClient) {}
 

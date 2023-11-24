@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ModalComponent } from './modal.component';
-import { DataService } from '../data.service';
+import { ModalService } from '../portfolio/services/modal.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { DataService } from '../data.service';
   exports: [
     ModalComponent
   ],
-  providers: [DataService],
+  providers: [ModalService],
   bootstrap: [ModalComponent]
 })
 export class ModalModule { }

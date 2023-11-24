@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EntryService } from '../services/entry.service';
-import { DataService } from '../../data.service';
+import { ModalService } from '../services/modal.service';
 import { AchievementsService } from '../services/achievements.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class AchievementComponent implements OnInit{
   selectedAchievementDescription: string = '';
 
   constructor(private entryService: EntryService,
-              private dataService: DataService,
+              private dataService: ModalService,
               private achievementsService: AchievementsService) {}
 
   selectRow(row: any): void {
@@ -28,15 +28,14 @@ export class AchievementComponent implements OnInit{
               }
 
   openModal(dataItem: any): void {
-    // Trigger the modal and pass the selected row data
+
     this.achievementsService.getData("achievement-description").subscribe((data) => {
       for (const item of data) {
-        console
         if (item.field1 == dataItem.onClick) {
           this.selectedAchievementDescription = item.field2;
         }
       }
-      this.selectRow(this.selectedAchievementDescription);
+      this.selectRow({"header":dataItem.field1,"body":this.selectedAchievementDescription});
     });
   }
 

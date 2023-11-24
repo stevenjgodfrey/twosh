@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from './data.service';
+import { ModalService } from './portfolio/services/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   selectedRow: any;
 
   constructor( private router: Router
-              ,private dataService: DataService
+              ,private dataService: ModalService
                ) {
                 this.dataService.showModal$.subscribe((show) => (this.showModal = show));
                 this.dataService.selectedRow$.subscribe((row) => (this.selectedRow = row));

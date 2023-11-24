@@ -3,11 +3,12 @@
     <div class="modal-header">
       <div class="small-cell">
         <a>
+
         </a>
       </div>
       <div class="center-cell">
         <a>
-
+          {{selectedRow.header}}
         </a>
       </div>
       <div class="small-cell">
@@ -17,8 +18,11 @@
       </div>
     </div>
     <div *ngIf="selectedRow">
-      <!-- Display the large field for the selected row -->
-      {{ selectedRow }}
+      {{ selectedRow.body }}
     </div>
+
   </div>
 </div>
+
+
+

@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { HomeComponent } from './home.component';
 import { FootballResultsModule } from './football-results/football-results.module';
-import { ModalComponent } from './modal/modal.component';
-import { DataService } from './data.service';
 import { ModalModule } from './modal/modal.module';
 
 
@@ -24,7 +22,6 @@ import { ModalModule } from './modal/modal.module';
     FootballResultsModule,
     ModalModule
   ],
-  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

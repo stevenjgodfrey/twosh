@@ -1,12 +1,10 @@
-// data.service.ts
-
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class ModalService {
   private selectedRowSubject = new BehaviorSubject<any>(null);
   selectedRow$: Observable<any> = this.selectedRowSubject.asObservable();
 
