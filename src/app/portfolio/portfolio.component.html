@@ -1,8 +1,8 @@
 <div>
   <div class="header">
     <div class="left-cell">
-      <a href="https://www.linkedin.com/in/steven-godfrey-025b8324">
-        <img src="../../assets/linkedin.png" class="responsive-image"/>
+      <a>
+        <img src="../../assets/cor-logos.jpeg" class="responsive-image"/>
       </a>
     </div>
     <div class="center-cell">
@@ -16,12 +16,12 @@
     </div>
     <div class="right-cell">
       <a>
-        <img (click)="setIntroModule('introduction')" src="../../assets/me.png"  alt="Profile Picture" class="responsive-image" />
+        <img (click)="setIntroModule('introduction')" src="../../assets/me.jpg"  alt="Profile Picture" class="responsive-image" />
       </a>
     </div>
   </div>
   <div class="main-content">
-    <div class ="box">
+    <div class ="container">
       <div *ngIf="items!==undefined && items[1]!==undefined" class="description">
         <div [ngSwitch]="entryClicked">
           <div *ngSwitchCase=introComponent>
@@ -34,4 +34,16 @@
       </div>
     </div>
   </div>
+  <div class="footer">
+    <div class="left-cell">
+    <a href="https://github.com/stevenjgodfrey/twosh">
+      <img src="../../assets/github.jpg" class="responsive-image"/>
+    </a>
+  </div>
+  <div class="right-cell">
+    <a href="https://www.linkedin.com/in/steven-godfrey-025b8324">
+      <img src="../../assets/linkedin.png" class="responsive-image"/>
+    </a>
+  </div>
+</div>
 </div>

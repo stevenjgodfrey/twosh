@@ -1,4 +1,3 @@
-<section id="achievement">
 <div>
   <table>
     <tr>
@@ -30,10 +29,9 @@
         </a>
       </td>
       <td *ngIf="item.descriptionExists==='Y'">
-        <button (click)="openModal(item)">Show Details</button>
+        <button (click)="openModal(item)">...</button>
       </td>
     </tr>
   </table>
   <app-modal *ngIf="showModal" [selectedRow]="selectedRow"></app-modal>
 </div>
-</section>
