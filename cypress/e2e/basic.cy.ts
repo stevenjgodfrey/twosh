@@ -1,11 +1,11 @@
-describe('empty spec', () => {
+describe('visit home', () => {
   beforeEach(() => {
     cy.visit('/')
   })
 
   it('displays the resources text', () => {
-    cy.get('a')
-    .contains('experience');
+    cy.get('h1')
+    .contains('Welcome to my Portfolio!');
   })
 //  it('renders the image', () => {
 //    cy.get('img')

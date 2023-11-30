@@ -48,3 +48,5 @@ Thumbs.db
 cypress/screenshots/basic.cy.ts/empty spec -- displays the resources text (failed).png
 cypress/screenshots/basic.cy.ts/empty spec -- renders the image (failed).png
 cypress/videos/basic.cy.ts.mp4
+cypress/videos/education.cy.ts.mp4
+cypress/videos/experience.cy.ts.mp4
